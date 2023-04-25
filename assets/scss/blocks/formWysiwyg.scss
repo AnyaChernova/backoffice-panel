@@ -1,0 +1,10 @@
+.formWysiwyg {
+	opacity: 0;
+	.d-typo {
+		background-color: var(--d-color-light);
+	}
+}
+
+.formWysiwyg.--init {
+	opacity: 1;
+}

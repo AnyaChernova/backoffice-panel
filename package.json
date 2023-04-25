@@ -1,0 +1,56 @@
+{
+	"name": "backoffice",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "env-cmd -e local nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate",
+		"pm2-server-stage": "pm2 start ecosystem.config.js --only BACKOFFICE:STAGE --update-env",
+		"pm2-server-prod": "pm2 start ecosystem.config.js --only BACKOFFICE:PROD --update-env",
+		"build:analyze": "env-cmd -e analyze nuxt build --analyze",
+		"build:stage": "env-cmd -e stage nuxt build",
+		"start:stage": "env-cmd -e stage yarn pm2-server-stage",
+		"build:prod": "env-cmd -e production nuxt build",
+		"start:prod": "env-cmd -e production yarn pm2-server-prod",
+		"new-entity": "node -r esm ./bin/new-entity.js"
+	},
+	"dependencies": {
+		"@babel/core": "7.17.12",
+		"@babel/preset-env": "7.17.12",
+		"@duotek/backoffice-ui": "0.4.1",
+		"@duotek/ui": "1.7.13",
+		"@nuxtjs/auth": "4.9.1",
+		"@nuxtjs/axios": "5.13.6",
+		"@nuxtjs/proxy": "2.1.0",
+		"@nuxtjs/pwa": "3.3.5",
+		"@popperjs/core": "2.11.5",
+		"body-parser": "1.20.0",
+		"cookie": "0.5.0",
+		"core-js": "3.22.5",
+		"dayjs": "1.11.2",
+		"env-cmd": "10.1.0",
+		"imask": "6.4.2",
+		"js-cookie": "3.0.1",
+		"nodemon": "2.0.16",
+		"nuxt": "2.15.8",
+		"nuxt-purgecss": "1.0.0",
+		"qs": "6.10.3",
+		"vue": "^2.6.0",
+		"vuex": "3.6.2"
+	},
+	"devDependencies": {
+		"@nuxt/types": "2.15.8",
+		"chalk": "4.1.2",
+		"change-case": "4.1.2",
+		"esm": "3.2.25",
+		"fs-extra": "10.1.0",
+		"sass": "1.51.0",
+		"sass-loader": "10.2.0",
+		"webpack": "4.46.0"
+	},
+	"resolutions": {
+		"@nuxt/babel-preset-app/core-js": "3.22.5"
+	}
+}

@@ -1,0 +1,37 @@
+.DFormField.--disabled {
+	.DFormField__area {
+		background-color: var(--d-color-plate-bg);
+	}
+}
+
+.DFormField.--hide-errors {
+	.DFormField__errors {
+		display: none;
+	}
+}
+
+.DFormField.--smallIndent {
+	.DFormControl {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	&.--small .DFormControl {
+		padding-right: 8px;
+		padding-left: 8px;
+	}
+}
+
+.DFormField.--small-height {
+	--height: 30px;
+	--control-padding-y: 10px;
+	--control-padding-x: 10px;
+
+	.DFormField__innerAfter {
+		padding-right: 10px;
+	}
+	.DFormField__innerAfter,
+	.DFormField__control > .DFormControl {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}

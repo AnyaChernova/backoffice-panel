@@ -1,0 +1,15 @@
+.DTable {
+	td {
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+.DTable.--row-height-42 {
+	tr {
+		min-height: 42px;
+	}
+}
+
+.DTable.--small {
+	--rowPaddingX: 8px;
+}
